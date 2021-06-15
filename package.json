@@ -1,0 +1,20 @@
+{
+  "name": "RSF",
+  "version": "0.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "mysql": "^2.18.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "node src/index.js"
+  },
+  "author": "CiberFixer",
+  "license": ""
+}
