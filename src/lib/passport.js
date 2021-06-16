@@ -24,6 +24,6 @@ passport.serializeUser((user,done)=>{
 })
 passport.deserializeUser((id,done)=>{
     conn.query(`SELECT * FROM user WHERE username='${id}'`,(err,result)=>{
-        return done(null,{id:'Jose Vargas',password:'1234'});
+        return done(null,result[0]);
     })
 })
