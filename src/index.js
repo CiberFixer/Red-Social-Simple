@@ -19,7 +19,7 @@ app.set('view engine','ejs');
 app.use(passport.initialize());
 app.use(passport.session());
 
-
+app.use(require('./router/index'));
 app.use(require('./router/autenticacion'));
 app.use(require('./router/publicaciones'));
 

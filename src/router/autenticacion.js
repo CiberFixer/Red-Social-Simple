@@ -16,15 +16,6 @@ const desautenticado=(req,res,next)=>{
 }
 
 
-router.get('/',autenticado,(req,res)=>{
-    let user=req.session.passport.user.id;
-    conn.query(`SELECT * FROM publication WHERE user='${user}'`,(err,publication)=>{
-        res.render('index',{
-            user:user,
-            publication:publication
-        });
-    })
-});
 router.get('/login',desautenticado,(req,res)=>{
     res.render('login');
 });
@@ -36,4 +27,5 @@ router.post('/exit',autenticado,(req,res)=>{
     req.session.destroy();
     res.redirect('/login');
 });
+
 module.exports=router;
