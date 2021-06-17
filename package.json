@@ -14,7 +14,7 @@
   "devDependencies": {},
   "scripts": {
     "dev": "node src/index.js",
-    "install": "npm i ejs express express-fileupload mysql passport passport-local"
+    "install": "npm i ejs express express-fileupload mysql passport passport-local express-session cookie-parser"
   },
   "author": "CiberFixer",
   "license": ""
