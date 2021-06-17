@@ -23,7 +23,7 @@ passport.serializeUser((user,done)=>{
     return done(null,{id:user.id});
 })
 passport.deserializeUser((id,done)=>{
-    conn.query(`SELECT * FROM user WHERE username='${id}'`,(err,result)=>{
-        return done(null,result[0]);
-    })
+    let user={};
+    conn.query(`SELECT * FROM user WHERE username='${id}'`,(err,result)=>{user=result[0]});
+    return done(null,user);
 })
